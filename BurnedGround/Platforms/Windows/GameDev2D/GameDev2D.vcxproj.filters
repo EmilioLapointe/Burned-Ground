@@ -1928,6 +1928,9 @@
     <ClCompile Include="..\..\..\Game\Map.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\Game\TestChange.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Libraries\glm\gtx\associated_min_max.inl">
