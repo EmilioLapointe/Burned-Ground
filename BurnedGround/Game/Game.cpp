@@ -14,6 +14,8 @@
 #include "../Source/Graphics/Graphics.h"
 #include "../Source/Events/Input/InputEvents.h"
 
+#include "Map.h"
+
 
 namespace GameDev2D
 {
@@ -29,7 +31,8 @@ namespace GameDev2D
     
     float Game::LoadContent()
     {
-        //Load Game content here
+        Map* myMap = new Map();
+
         return 1.0f;
     }
     

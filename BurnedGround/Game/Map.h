@@ -1,15 +1,15 @@
 #ifndef MAP_H
 #define MAP_H
-
-#include "../Source/Services/ServiceLocator.h"
 //IM HERE TODO
+class Block;
+
 class Map
 {
 public:
     Map();
     ~Map();
 private:
-    m_MapArray[ServiceLocator::GetPlatformLayer()->GetWidth()][ServiceLocator::GetPlatformLayer()->GetHeight]
+    Block* m_MapArray[WINDOWS_DEFAULT_WIDTH][WINDOWS_DEFAULT_HEIGHT];
 };
 
 #endif
