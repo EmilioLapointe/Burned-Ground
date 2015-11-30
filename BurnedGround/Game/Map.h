@@ -5,17 +5,16 @@
 
 class Block;
 
-class Map
+class Map : public GameObject
 {
 public:
     Map();
     ~Map();
 
-    void Draw();
+    //void Draw();
 
 private:
     Block* m_MapArray[SCREEN_WIDTH][SCREEN_HEIGHT];
-    Rect* m_BlockPalet[AmountOfColors];
 };
 
 #endif

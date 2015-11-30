@@ -1,30 +1,25 @@
 #include "Block.h"
 
-Block::Block(float x, float y) :
+Block::Block(float x, float y) : GameObject("Block"),
 m_Type(0),
 m_Color(Green)
 {
-    m_Visual = new Rect(0.0f, 0.0f, BLOCK_SIZE, BLOCK_SIZE);
+    m_Visual = (Rect*)AddChild(new Rect(0.0f, 0.0f, BLOCK_SIZE, BLOCK_SIZE), false);
     m_Visual->SetColor(ColorPalet[Green]);
     m_Visual->SetLocalPosition(x, y);
 }
 
-Block::Block(float x, float y, int aType, int aColor) :
+Block::Block(float x, float y, int aType, int aColor) : GameObject("Block"),
 m_Type(aType),
 m_Color(aColor)
 {
-    m_Visual = new Rect(0.0f, 0.0f, BLOCK_SIZE, BLOCK_SIZE);
+    m_Visual = (Rect*)AddChild(new Rect(0.0f, 0.0f, BLOCK_SIZE, BLOCK_SIZE), false);
     m_Visual->SetColor(ColorPalet[aColor]);
     m_Visual->SetLocalPosition(x, y);
 }
 
 Block::~Block()
 {
-    if (m_Visual != nullptr)
-    {
-        delete m_Visual;
-        m_Visual = nullptr;
-    }
 }
 
 

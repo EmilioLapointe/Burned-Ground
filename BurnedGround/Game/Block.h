@@ -3,7 +3,7 @@
 
 #include "MapConstants.h"
 
-class Block
+class Block : public GameObject
 {
 public :
 

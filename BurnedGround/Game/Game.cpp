@@ -19,19 +19,16 @@
 
 namespace GameDev2D
 {
-    Game::Game() : Scene("Game")
-    {
-
-    }
+    Game::Game() : Scene("Game"),
+    m_DaMap(nullptr)
+    {}
     
     Game::~Game()
-    {
-
-    }
+    {}
     
     float Game::LoadContent()
     {
-        daMap = new Map();
+        m_DaMap = (Map*)AddGameObject(new Map());
         return 1.0f;
     }
     
@@ -39,11 +36,10 @@ namespace GameDev2D
     {
         Scene::Update(aDelta);
     }
-    
+
     void Game::Draw()
     {
         Scene::Draw();
-        daMap->Draw();
     }
     
     void Game::HandleEvent(Event* aEvent)

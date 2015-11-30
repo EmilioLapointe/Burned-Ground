@@ -30,8 +30,7 @@ namespace GameDev2D
         
         //Updates the game
         void Update(double delta);
-        
-        //Draw the game
+
         void Draw();
 
         //Handle events in this method
@@ -40,7 +39,7 @@ namespace GameDev2D
     private:
         //Conveniance method to handle touch events
         void HandleTouchEvent(TouchEvent* touchEvent);
-        Map* daMap;
+        Map* m_DaMap;
     };
 }
 
