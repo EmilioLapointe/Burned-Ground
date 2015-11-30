@@ -1,6 +1,8 @@
 #ifndef MAP_H
 #define MAP_H
-//IM HERE TODO
+
+#include "MapConstants.h"
+
 class Block;
 
 class Map
@@ -8,8 +10,12 @@ class Map
 public:
     Map();
     ~Map();
+
+    void Draw();
+
 private:
-    Block* m_MapArray[WINDOWS_DEFAULT_WIDTH][WINDOWS_DEFAULT_HEIGHT];
+    Block* m_MapArray[SCREEN_WIDTH][SCREEN_HEIGHT];
+    Rect* m_BlockPalet[AmountOfColors];
 };
 
 #endif

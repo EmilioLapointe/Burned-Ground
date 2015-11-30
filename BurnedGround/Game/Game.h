@@ -12,6 +12,7 @@
 #include "../Source/Core/Scene.h"
 #include "../Source/Physics/PhysicsWorld.h"
 
+class Map;
 
 namespace GameDev2D
 {
@@ -39,6 +40,7 @@ namespace GameDev2D
     private:
         //Conveniance method to handle touch events
         void HandleTouchEvent(TouchEvent* touchEvent);
+        Map* daMap;
     };
 }
 

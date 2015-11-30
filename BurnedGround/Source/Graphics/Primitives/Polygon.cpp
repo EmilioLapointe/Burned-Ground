@@ -207,7 +207,7 @@ namespace GameDev2D
         //Call the GameObject's Draw() method, this will ensure that any children will also get drawn
         GameObject::Draw();
     }
-    
+
     void Polygon::AddVertex(vec2 aVertex)
     {
         //Add the vertex to the vertices vector

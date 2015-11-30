@@ -31,8 +31,7 @@ namespace GameDev2D
     
     float Game::LoadContent()
     {
-        Map* myMap = new Map();
-
+        daMap = new Map();
         return 1.0f;
     }
     
@@ -44,6 +43,7 @@ namespace GameDev2D
     void Game::Draw()
     {
         Scene::Draw();
+        daMap->Draw();
     }
     
     void Game::HandleEvent(Event* aEvent)
